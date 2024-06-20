@@ -55,15 +55,15 @@ document.addEventListener("DOMContentLoaded", function () {
 var today = new Date() 
 var curHr = today.getHours() 
 if (curHr >= 0 && curHr < 6) { 
-  document.getElementById("demo").innerHTML = 'Hi There!'; 
+  document.getElementById("demo").innerHTML = 'Hi There! 🌃'; 
     } 
   else if (curHr >= 6 && curHr < 12) {
-     document.getElementById("demo").innerHTML = 'Good Morning!'; 
+     document.getElementById("demo").innerHTML = 'Good Morning! 🌄'; 
     } 
   else if (curHr >= 12 && curHr < 17) { 
-    document.getElementById("demo").innerHTML = 'Good Afternoon!'; 
+    document.getElementById("demo").innerHTML = 'Good Afternoon! 🌞'; 
     } 
-  else { document.getElementById("demo").innerHTML = 'Good Evening!';
+  else { document.getElementById("demo").innerHTML = 'Good Evening! 🌇';
 } 
 //Auto type intro
 var typed = new Typed('.element', {
