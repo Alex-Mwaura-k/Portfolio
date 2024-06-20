@@ -15,6 +15,9 @@
   <script src="https://kit.fontawesome.com/08b4a0d388.js" crossorigin="anonymous"></script>
   <!-- Auto type js  -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- sweet Aleart  -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <!-- sweet Aleart  -->
 </head>
 <body>
   <header>
@@ -306,36 +309,38 @@
   </div>
 
   <div class="contactForm">
-      <h2>Let me work on your Project😊</h2>
+    <h2>Let me work on your Project😊</h2>
+    <form id="contactForm" action="https://formsubmit.co/alecsmwaura@gmail.com" method="POST">
       <div class="formBox">
-          <div class="inputBox w50">
-              <input type="text" name="" id="" required>
-              <span>First Name</span>
-          </div>
-          <div class="inputBox w50">
-              <input type="text" name="" id="" required>
-              <span>Last Name</span>
-          </div>
-          <div class="inputBox w50">
-              <input type="email" name="" id="" required>
-              <span>Email</span>
-          </div>
-          <div class="inputBox w50">
-              <input type="text" name="" id="" required>
-              <span>Mobile Number</span>
-          </div>
-          <div class="inputBox w100">
-              <textarea name="" id="" rows="4" cols="7" required></textarea>
-              <span>Write Your Message Here.</span>
-          </div>
-          <div class="inputBox w100">
-              <input type="submit" value="Send">
-          </div>
+        <div class="inputBox w50">
+          <input type="text" name="FirstName" id="FirstName" placeholder="First Name" required>
+        </div>
+        <div class="inputBox w50">
+          <input type="text" name="LastName" id="LastName" placeholder="Last Name" required>
+        </div>
+        <div class="inputBox w50">
+          <input type="email" name="Email" id="Email" placeholder="Email" required>
+        </div>
+        <div class="inputBox w50">
+          <input type="tel" name="Phone" id="Phone" placeholder="Mobile Number" required>
+        </div>
+        <div class="inputBox w100">
+          <textarea name="Message" id="Message" rows="4" placeholder="Write Your Message Here." required></textarea>
+        </div>
+        <div class="inputBox w100">
+          <input type="submit" value="Send" id="submitForm">
+        </div>
+        <!-- Form submit buttons -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://lexcy.co.ke/page/home#Hire/">
+        <input type="hidden" name="_template" value="table">
       </div>
+    </form>
   </div>
   </div>
 </div>
- </section>
+ 
+</section>
 
   <!-- Footer section  -->
   <Footer>
@@ -343,5 +348,6 @@
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="/js/app.js"></script>
+<script src="/js/contact.js"></script>
 </body>
 </html>
