@@ -969,7 +969,7 @@ section{
 
 
 /* Animations and timing delays */
-.animate {
+.animated {
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
   animation-fill-mode: backwards;
@@ -1076,14 +1076,6 @@ section{
 
 }
 
-/* Partners  */
-.trusted-partners{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
 /* Hire section  */
 
 
@@ -1106,20 +1098,30 @@ section{
   top: 35px;
   background-color: #000;
   bottom: 0;
+  font-family: "Poppins-black-italic", sans-serif;
+
 }
 #waterdrop {
   height: 30px;
-
+  display: flex;
+margin: 0 auto;
+max-width: 1300px;
+width: 100%;
+overflow: hidden;
 }
 
 #waterdrop canvas {
   bottom: -70px !important;
-  max-width: 1300px;
   margin: 0 auto;
+  width: 100%;
 }
 footer{
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
 background-color: #06404b;
 color: aliceblue;
+
 }
 .footer-details{
 max-width: 1300px;
@@ -1129,4 +1131,28 @@ margin: 0 auto;
 display: flex;
 align-items: center;
 justify-content: space-between;
+}
+
+
+/* Animation  */
+.animate {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-20%);
+  transition: all .5s;
+}
+.show{
+  opacity :  1 !important;;
+  filter: blur(0);
+  transform: none;
+}
+.animate2 {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s, transform 0.5s, filter 0.5s;
+}
+
+.show {
+  opacity: 1;
+  transform: scale(1);
 }
