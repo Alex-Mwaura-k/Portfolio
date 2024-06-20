@@ -1100,3 +1100,31 @@ section{
 
 
 /* Footer section  */
+.page-wrapper{
+  /* position: absolute; */
+  /* bottom: 0; */
+  width: 100%;
+  z-index: 11111;
+  top: 35px;
+  background-color: #000;
+}
+#waterdrop {
+  height: 30px;
+}
+
+#waterdrop canvas {
+  bottom: -70px !important;
+}
+footer{
+background-color: #06404b;
+color: aliceblue;
+}
+.footer-details{
+max-width: 1300px;
+width: 98%;
+padding: 0 4px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
