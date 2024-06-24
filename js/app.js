@@ -67,7 +67,7 @@ if (curHr >= 0 && curHr < 6) {
 } 
 //Auto type intro
 var typed = new Typed('.element', {
-  strings: ["", "Security Analyst","Front-End Developer", "Tech Support personnel"],
+  strings: ["Security Analyst","Front-End Developer", "Tech Support personnel"],
   typeSpeed: 120,
   backSpeed: 50,
   loop: true
