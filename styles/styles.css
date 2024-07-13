@@ -408,9 +408,8 @@ section {
   line-height: 1;
   color: #183c414d;
   z-index: 2;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   filter: drop-shadow(0 2px 5px);
-  padding: 5px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -454,7 +453,7 @@ section {
   .introduction {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 0 8px 0 8px;
-    padding: 10px 0 12px 0;
+    padding: 5px 0;
   }
   .container {
     width: 98%;
