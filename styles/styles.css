@@ -461,7 +461,7 @@ section {
   #Home .heropage {
     display: flex;
     flex-direction: column;
-    width: 98%;
+    width: 100%;
     grid-template-columns: unset;
   }
   .occupation {

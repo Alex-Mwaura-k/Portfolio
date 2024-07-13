@@ -1,81 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-*{
+* {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-html{
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/img/index_img/background.jpg");
+html {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/img/index_img/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
 }
-body{
-  height: 100vh;
+body {
+  height: 100dvh;
 }
-.main{
+.main {
   max-width: 1300px;
   width: 98%;
   height: 100%;
   margin: 0 auto;
 }
-.navbar{
+.navbar {
   width: 100%;
 }
-.wrapper{
+.wrapper {
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.329), rgba(28, 72, 90, 0.329), rgba(74, 250, 20, 0.075), rgba(250, 169, 64, 0.219), rgba(92, 62, 72, 0.397));
-  border: .5px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.329),
+    rgba(28, 72, 90, 0.329),
+    rgba(74, 250, 20, 0.075),
+    rgba(250, 169, 64, 0.219),
+    rgba(92, 62, 72, 0.397)
+  );
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
-  box-shadow: 3px 2px 20px rgba(250, 123, 20, 0.137), -5px 2px 10px rgba(20, 223, 250, 0.199);
+  box-shadow: 3px 2px 20px rgba(250, 123, 20, 0.137),
+    -5px 2px 10px rgba(20, 223, 250, 0.199);
   padding: 3px 15px;
   margin-top: 4px;
   border-radius: 8px;
   color: #fff;
   font-size: 14px;
 }
-.wrapper .logoimg img{
+.wrapper .logoimg img {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2px;
   width: 38px;
 }
-.content-container{
+.content-container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 96%;
 }
-.content{
+.content {
   display: flex;
   flex-direction: column;
   width: 320px;
   border-radius: 8px;
   background-color: rgba(227, 227, 227, 0.61);
-  box-shadow: 3px 2px 20px rgba(250, 123, 20, 0.836), -5px 2px 10px rgb(20, 166, 250);
+  box-shadow: 3px 2px 20px rgba(250, 123, 20, 0.836),
+    -5px 2px 10px rgb(20, 166, 250);
 }
-.links{
- height: 100%;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
+.links {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.links li{
+.links li {
   list-style: none;
   padding: calc(100% / 10);
   width: 100%;
 }
-.links a{
+.links a {
   text-decoration: none;
   padding: 4%;
   display: flex;
@@ -88,25 +102,26 @@ body{
   gap: 5px;
   display: flex;
   justify-content: center;
-  align-items:baseline;
-  transition: all .5s ease-in-out;
+  align-items: baseline;
+  transition: all 0.5s ease-in-out;
   /* font-family: 'Poppins', sans-serif; */
 }
-.links a:hover{
+.links a:hover {
   letter-spacing: 2px;
   background-color: rgba(0, 255, 149, 0.678);
   box-shadow: 0 0 10px rgba(31, 74, 218, 0.5);
   border-radius: 20px;
 }
-.fas,  .fa-brands{
+.fas,
+.fa-brands {
   font-size: 18px;
 }
 .ball {
   pointer-events: none;
-  position: absolute; 
+  position: absolute;
   width: 10px;
   height: 10px;
-  border-radius: 50%; 
+  border-radius: 50%;
   background: rgb(240, 240, 240);
   animation: implode 1s ease-in-out;
   animation-fill-mode: both;
@@ -114,8 +129,9 @@ body{
   z-index: -1;
 }
 @keyframes implode {
-  100% {transform: scale(0)}
+  100% {
+    transform: scale(0);
+  }
 }
-@media only screen and (max-width: 768px){
-
+@media only screen and (max-width: 768px) {
 }
