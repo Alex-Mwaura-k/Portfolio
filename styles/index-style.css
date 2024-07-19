@@ -6,6 +6,9 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+body {
+  margin: 0;
+}
 html {
   background-image: linear-gradient(
       to bottom,
