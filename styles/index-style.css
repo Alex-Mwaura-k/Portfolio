@@ -64,6 +64,7 @@ body {
   align-items: center;
   margin-top: 2px;
   width: 38px;
+  clip-path: circle(49% at 50% 50%);
 }
 .content-container {
   display: flex;
