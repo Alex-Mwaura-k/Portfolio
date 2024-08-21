@@ -21,6 +21,8 @@ html {
   background-position: center;
   background-attachment: fixed;
   overflow: hidden;
+  position: fixed;
+  width: 100%;
 }
 body {
   height: 100dvh;
@@ -123,18 +125,19 @@ body {
 .ball {
   pointer-events: none;
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: rgb(240, 240, 240);
-  animation: implode 1s ease-in-out;
+  animation: implode 1s linear;
   animation-fill-mode: both;
   opacity: 0.2;
   z-index: -1;
+  overflow: hidden;
 }
 @keyframes implode {
   100% {
-    transform: scale(0);
+    transform: scale(0.3);
   }
 }
 @media only screen and (max-width: 768px) {
