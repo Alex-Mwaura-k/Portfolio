@@ -129,7 +129,7 @@ body {
   height: 5px;
   border-radius: 50%;
   background: rgb(240, 240, 240);
-  animation: implode 1s linear;
+  animation: implode 1s ease-in-out;
   animation-fill-mode: both;
   opacity: 0.2;
   z-index: -1;
@@ -137,7 +137,7 @@ body {
 }
 @keyframes implode {
   100% {
-    transform: scale(0.3);
+    transform: scale(0.5);
   }
 }
 @media only screen and (max-width: 768px) {
