@@ -67,7 +67,7 @@ if (curHr >= 0 && curHr < 6) {
 } 
 //Auto type intro
 var typed = new Typed('.element', {
-  strings: ["Security Analyst","Front-End Developer", "Tech Support personnel"],
+  strings: ["Cloud Architect", "Security Analyst", "Fullstack Developer", "Tech Support personnel"],
   typeSpeed: 120,
   backSpeed: 50,
   loop: true
@@ -182,4 +182,38 @@ particlesJS("particles-js", {
     }
   },
   "retina_detect": true
+});
+
+// Fullscreen Toggle 
+document.addEventListener("DOMContentLoaded", function() {
+  const themeToggle = document.getElementById("themeToggle");
+
+  themeToggle.addEventListener("change", function() {
+    if (document.fullscreenElement) {
+      // Exit fullscreen if already in fullscreen mode
+      document.exitFullscreen().catch(err => {
+        console.error(`Could not exit fullscreen: ${err.message}`);
+        alert("Could not exit fullscreen.");
+      });
+    } else {
+      // Check if fullscreen is supported
+      if (document.documentElement.requestFullscreen) {
+        // Enter fullscreen
+        document.documentElement.requestFullscreen().catch(err => {
+          console.error(`Could not enter fullscreen: ${err.message}`);
+          alert("Could not enter fullscreen.");
+        });
+      } else {
+        alert("Fullscreen mode is not supported in this browser.");
+      }
+    }
+
+    // Toggle dark mode
+    document.body.classList.toggle("dark-mode");
+  });
+});
+// Copyright Year
+document.addEventListener("DOMContentLoaded", function() {
+  const currentYear = new Date().getFullYear();
+  document.getElementById("copyright-year").textContent = currentYear;
 });

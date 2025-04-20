@@ -29,6 +29,9 @@
 html {
   background-color: var(--backgroundColor);
 }
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
 header {
   position: fixed;
   width: 100%;
@@ -45,6 +48,7 @@ nav {
   width: 95%;
   margin: 0 auto;
   justify-content: space-between;
+  caret-color: transparent;
 }
 nav .logo {
   cursor: pointer;
@@ -152,7 +156,29 @@ nav .logo a {
   transform: translateX(30px);
   background-color: #2bcde2;
 }
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+.dark-mode a {
+  color: white !important;
+  text-decoration: none;
+}
+.dark-mode .image h2 {
+  color: rgba(255, 255, 255, 0.514);
+}
+.dark-mode a:hover {
+  color: #ddd; /* Optional: change link hover color in dark mode */
+  text-decoration: underline; /* Optional: underline on hover */
+}
 
+.theme-toggle-checkbox {
+  display: none;
+}
+
+.theme-toggle-label {
+  cursor: pointer;
+}
 /* Mobile burger Btn  */
 .burger_btn {
   display: none;
@@ -301,7 +327,6 @@ section {
 
 #Home {
   height: 100vh;
-  background-color: #dbdbdb;
 }
 #Home .container {
   max-width: unset;
