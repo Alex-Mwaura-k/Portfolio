@@ -855,7 +855,7 @@ section {
   margin: 20px 0;
   width: calc(100% / 2 - 50px);
   height: 18em;
-  border: 2px solid;
+  border: 0.5px solid;
   border-image: linear-gradient(
       -50deg,
       rgb(0, 77, 128),
@@ -867,10 +867,21 @@ section {
       green
     )
     1;
+  border-radius: 10px;
   transition: 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
+
+  /* Ensure border-image respects border-radius */
+  -webkit-mask-image: radial-gradient(
+    white,
+    black
+  ); /* helps in some browsers */
+  mask-image: radial-gradient(white, black);
+  background-clip: padding-box; /* helps with clipping */
+  -webkit-background-clip: padding-box;
 }
+
 .overlay {
   position: relative;
   display: flex;
@@ -977,6 +988,7 @@ section {
   font-weight: bold;
   box-shadow: rgba(0, 0, 0, 0.5);
   transition: 0.2s linear;
+  border-radius: 8px;
 }
 .project-btn a:hover {
   color: #000000;
