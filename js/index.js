@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const linkedin = document.getElementById("linkedin");
   linkedin.addEventListener("click", function (e) {
     e.preventDefault();
-    const appUrl = "linkedin://in/alex-mwaura-7707b21a2";
+    const appUrl = "https://www.google.com/url?sa=j&url=https%3A%2F%2Fke.linkedin.com%2Fin%2Falex-mwaura-7707b21a2&uct=1749320045&usg=i-TcCavHfOC6QcKUTOMQBVueZEI.&opi=89978449&ved=2ahUKEwi5irGF9d-NAxV2UKQEHZDlL-oQo-ENegQIABAC";
     const webUrl = this.href;
 
     if (isInAppBrowser()) {
