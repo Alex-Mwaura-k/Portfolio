@@ -1,50 +1,87 @@
-// Trail cursor 
-$(document).ready(function(){
-  
-  var mousePos = {};
+// index.js
 
- function getRandomInt(min, max) {
-   return Math.round(Math.random() * (max - min + 1)) + min;
- }
-  
-  $(window).mousemove(function(e) {
+// Trail cursor effect
+$(document).ready(function () {
+  let mousePos = {};
+
+  function getRandomInt(min, max) {
+    return Math.round(Math.random() * (max - min + 1)) + min;
+  }
+
+  $(window).mousemove(function (e) {
     mousePos.x = e.pageX;
     mousePos.y = e.pageY;
   });
-  
-  $(window).mouseleave(function(e) {
+
+  $(window).mouseleave(function () {
     mousePos.x = -1;
     mousePos.y = -1;
   });
-  
-  var draw = setInterval(function(){
-    if(mousePos.x > 0 && mousePos.y > 0){
-      
-      var range = 15;
-      
-      var color = "background: rgb("+getRandomInt(0,255)+","+getRandomInt(0,255)+","+getRandomInt(0,255)+");";
-      
-      var sizeInt = getRandomInt(10, 30);
-      size = "height: " + sizeInt + "px; width: " + sizeInt + "px;";
-      
-      var left = "left: " + getRandomInt(mousePos.x-range-sizeInt, mousePos.x+range) + "px;";
-      
-      var top = "top: " + getRandomInt(mousePos.y-range-sizeInt, mousePos.y+range) + "px;"; 
 
-      var style = left+top+color+size;
-      $("<div class='ball' style='" + style + "'></div>").appendTo('body').one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function(){$(this).remove();}); 
+  setInterval(function () {
+    if (mousePos.x > 0 && mousePos.y > 0) {
+      const range = 15;
+
+      const color =
+        "background: rgb(" +
+        getRandomInt(0, 255) +
+        "," +
+        getRandomInt(0, 255) +
+        "," +
+        getRandomInt(0, 255) +
+        ");";
+
+      const sizeInt = getRandomInt(10, 30);
+      const size = "height: " + sizeInt + "px; width: " + sizeInt + "px;";
+
+      const left =
+        "left: " +
+        getRandomInt(mousePos.x - range - sizeInt, mousePos.x + range) +
+        "px;";
+      const top =
+        "top: " +
+        getRandomInt(mousePos.y - range - sizeInt, mousePos.y + range) +
+        "px;";
+
+      const style = left + top + color + size;
+      $("<div class='ball' style='" + style + "'></div>")
+        .appendTo("body")
+        .one(
+          "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+          function () {
+            $(this).remove();
+          }
+        );
     }
   }, 1);
 });
 
-
-//linking scripts
+// Social link logic
 document.addEventListener("DOMContentLoaded", function () {
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  // In-app browser detection (Instagram, Facebook, LinkedIn)
+  function isInAppBrowser() {
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
+    return /Instagram|FBAN|FBAV|LinkedIn/i.test(ua);
+  }
+
+  function isMobile() {
+    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  }
+
+  function openInNativeBrowser(url) {
+    const win = window.open(url, "_blank");
+    if (!win) {
+      alert("Please open this link in your browser for the best experience.");
+    }
+  }
 
   function openAppWithFallback(appUrl, webUrl) {
-    if (!isMobile) {
-      // On desktop, just open the web link
+    if (isInAppBrowser()) {
+      openInNativeBrowser(webUrl);
+      return;
+    }
+
+    if (!isMobile()) {
       window.open(webUrl, "_blank");
       return;
     }
@@ -63,30 +100,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 1000);
   }
 
-  // LinkedIn
-  const linkedin = document.getElementById("linkedin");
-  linkedin.addEventListener("click", function (e) {
+  // Attach handlers
+  document.getElementById("linkedin").addEventListener("click", function (e) {
     e.preventDefault();
-    const appUrl = "linkedin://in/alex-mwaura-7707b21a2";
-    const webUrl = this.href;
-    openAppWithFallback(appUrl, webUrl);
+    openAppWithFallback(
+      "linkedin://in/alex-mwaura-7707b21a2",
+      "https://www.linkedin.com/in/alex-mwaura-7707b21a2/"
+    );
   });
 
-  // Instagram
-  const instagram = document.getElementById("instagram");
-  instagram.addEventListener("click", function (e) {
+  document.getElementById("instagram").addEventListener("click", function (e) {
     e.preventDefault();
-    const appUrl = "instagram://user?username=lexcy.__";
-    const webUrl = this.href;
-    openAppWithFallback(appUrl, webUrl);
+    openAppWithFallback(
+      "instagram://user?username=lexcy.__",
+      "https://www.instagram.com/lexcy.__"
+    );
   });
 
-  // WhatsApp
-  const whatsapp = document.getElementById("whatsapp");
-  whatsapp.addEventListener("click", function (e) {
+  document.getElementById("whatsapp").addEventListener("click", function (e) {
     e.preventDefault();
-    const appUrl = "whatsapp://send?phone=+254734716845";
-    const webUrl = this.href;
-    openAppWithFallback(appUrl, webUrl);
+    openAppWithFallback(
+      "whatsapp://send?phone=+254734716845",
+      "https://wa.me/254734716845"
+    );
   });
 });
