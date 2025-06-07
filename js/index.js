@@ -36,3 +36,57 @@ $(document).ready(function(){
     }
   }, 1);
 });
+
+
+//linking scripts
+document.addEventListener("DOMContentLoaded", function () {
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  function openAppWithFallback(appUrl, webUrl) {
+    if (!isMobile) {
+      // On desktop, just open the web link
+      window.open(webUrl, "_blank");
+      return;
+    }
+
+    const now = Date.now();
+    const iframe = document.createElement("iframe");
+    iframe.style.display = "none";
+    iframe.src = appUrl;
+    document.body.appendChild(iframe);
+
+    setTimeout(() => {
+      if (Date.now() - now < 1500) {
+        window.location.href = webUrl;
+      }
+      document.body.removeChild(iframe);
+    }, 1000);
+  }
+
+  // LinkedIn
+  const linkedin = document.getElementById("linkedin");
+  linkedin.addEventListener("click", function (e) {
+    e.preventDefault();
+    const appUrl = "linkedin://in/alex-mwaura-7707b21a2";
+    const webUrl = this.href;
+    openAppWithFallback(appUrl, webUrl);
+  });
+
+  // Instagram
+  const instagram = document.getElementById("instagram");
+  instagram.addEventListener("click", function (e) {
+    e.preventDefault();
+    const appUrl = "instagram://user?username=lexcy.__";
+    const webUrl = this.href;
+    openAppWithFallback(appUrl, webUrl);
+  });
+
+  // WhatsApp
+  const whatsapp = document.getElementById("whatsapp");
+  whatsapp.addEventListener("click", function (e) {
+    e.preventDefault();
+    const appUrl = "whatsapp://send?phone=+254734716845";
+    const webUrl = this.href;
+    openAppWithFallback(appUrl, webUrl);
+  });
+});
