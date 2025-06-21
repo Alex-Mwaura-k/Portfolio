@@ -51,13 +51,13 @@ $(document).ready(function () {
   }, 1);
 });
 
-// Detect in-app browser (Instagram, Facebook, LinkedIn, etc.)
+// Detect if user is inside an in-app browser like Instagram, Facebook, LinkedIn
 function isInAppBrowser() {
   const ua = navigator.userAgent || navigator.vendor || window.opera;
   return /FBAN|FBAV|Instagram|LinkedInApp|Twitter/i.test(ua);
 }
 
-// Try to open app using iframe, fallback to web URL if it fails
+// Attempt to open the native app; fallback to web link if it fails
 function openAppWithFallback(appUrl, webUrl) {
   const now = Date.now();
   const iframe = document.createElement("iframe");
@@ -73,7 +73,7 @@ function openAppWithFallback(appUrl, webUrl) {
   }, 1000);
 }
 
-// Open external browser (especially from in-app browsers)
+// Open the link in a new external browser tab
 function openInExternalBrowser(url) {
   const win = window.open(url, "_blank");
   if (!win) {
