@@ -51,13 +51,18 @@ $(document).ready(function () {
   }, 1);
 });
 
-// Detect if user is inside an in-app browser like Instagram, Facebook, LinkedIn
+// Detect if user is in Instagram, Facebook, LinkedIn app browsers
 function isInAppBrowser() {
   const ua = navigator.userAgent || navigator.vendor || window.opera;
   return /FBAN|FBAV|Instagram|LinkedInApp|Twitter/i.test(ua);
 }
 
-// Attempt to open the native app; fallback to web link if it fails
+// Detect Windows PC for Microsoft Store LinkedIn link
+function isWindowsPC() {
+  return navigator.userAgent.includes("Windows NT") && !/Mobile/i.test(navigator.userAgent);
+}
+
+// Open app using iframe with fallback to web URL
 function openAppWithFallback(appUrl, webUrl) {
   const now = Date.now();
   const iframe = document.createElement("iframe");
@@ -73,7 +78,7 @@ function openAppWithFallback(appUrl, webUrl) {
   }, 1000);
 }
 
-// Open the link in a new external browser tab
+// Open URL in a new browser tab
 function openInExternalBrowser(url) {
   const win = window.open(url, "_blank");
   if (!win) {
@@ -81,17 +86,29 @@ function openInExternalBrowser(url) {
   }
 }
 
+// DOM event logic
 document.addEventListener("DOMContentLoaded", function () {
   // LinkedIn
   const linkedin = document.getElementById("linkedin");
   if (linkedin) {
-    const linkedinUrl = "https://www.linkedin.com/in/alex-mwaura-7707b21a2/";
+    const storeUrl = "ms-windows-store://pdp/?ProductId=9WZDNCRFJ4Q7&mode=mini&cid=guest_desktop_upsell_authwall2";
+    const webUrl = "https://www.linkedin.com/in/alex-mwaura-7707b21a2/";
+
     linkedin.addEventListener("click", function (e) {
       e.preventDefault();
-      if (isInAppBrowser()) {
-        openInExternalBrowser(linkedinUrl);
+
+      if (isWindowsPC()) {
+        // Attempt to open LinkedIn via Windows Store deep link
+        window.location.href = storeUrl;
+
+        // Fallback to web profile if nothing happens
+        setTimeout(() => {
+          window.open(webUrl, "_blank");
+        }, 1500);
+      } else if (isInAppBrowser()) {
+        openInExternalBrowser(webUrl);
       } else {
-        openAppWithFallback(linkedinUrl, linkedinUrl);
+        openAppWithFallback(webUrl, webUrl);
       }
     });
   }
@@ -103,6 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const webUrl = "https://www.instagram.com/lexcy.__";
     instagram.addEventListener("click", function (e) {
       e.preventDefault();
+
       if (isInAppBrowser()) {
         openInExternalBrowser(webUrl);
       } else {
@@ -118,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const webUrl = "https://wa.me/254734716845";
     whatsapp.addEventListener("click", function (e) {
       e.preventDefault();
+
       if (isInAppBrowser()) {
         openInExternalBrowser(webUrl);
       } else {
