@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const linkedin = document.getElementById("linkedin");
   linkedin.addEventListener("click", function (e) {
     e.preventDefault();
-    const appUrl = "https://www.linkedin.com/in/alex-mwaura-7707b21a2/?originalSubdomain=ke";
+    const appUrl = "https://ke.linkedin.com/in/alex-mwaura-7707b21a2";
     const webUrl = this.href;
 
     if (isInAppBrowser()) {
