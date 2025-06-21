@@ -51,7 +51,13 @@ $(document).ready(function () {
   }, 1);
 });
 
-// App deep link fallback logic
+// Detect in-app browser (Instagram, Facebook, LinkedIn, etc.)
+function isInAppBrowser() {
+  const ua = navigator.userAgent || navigator.vendor || window.opera;
+  return /FBAN|FBAV|Instagram|LinkedInApp|Twitter/i.test(ua);
+}
+
+// Try to open app using iframe, fallback to web URL if it fails
 function openAppWithFallback(appUrl, webUrl) {
   const now = Date.now();
   const iframe = document.createElement("iframe");
@@ -67,12 +73,7 @@ function openAppWithFallback(appUrl, webUrl) {
   }, 1000);
 }
 
-// Detect if inside Instagram/Facebook/LinkedIn in-app browser
-function isInAppBrowser() {
-  return /Instagram|FBAN|FBAV|LinkedIn/i.test(navigator.userAgent);
-}
-
-// Force open in external browser
+// Open external browser (especially from in-app browsers)
 function openInExternalBrowser(url) {
   const win = window.open(url, "_blank");
   if (!win) {
@@ -82,67 +83,46 @@ function openInExternalBrowser(url) {
 
 document.addEventListener("DOMContentLoaded", function () {
   // LinkedIn
-document.addEventListener("DOMContentLoaded", function () {
   const linkedin = document.getElementById("linkedin");
-  const profileUrl = "https://www.linkedin.com/in/alex-mwaura-7707b21a2/";
-
   if (linkedin) {
+    const linkedinUrl = "https://www.linkedin.com/in/alex-mwaura-7707b21a2/";
     linkedin.addEventListener("click", function (e) {
       e.preventDefault();
-
       if (isInAppBrowser()) {
-        openInExternalBrowser(profileUrl);
+        openInExternalBrowser(linkedinUrl);
       } else {
-        openAppWithFallback(profileUrl, profileUrl);
+        openAppWithFallback(linkedinUrl, linkedinUrl);
       }
     });
   }
 
-  function isInAppBrowser() {
-    const ua = navigator.userAgent || navigator.vendor || window.opera;
-    return /FBAN|FBAV|Instagram|Twitter|LinkedInApp/i.test(ua);
-  }
-
-  function openInExternalBrowser(url) {
-    window.open(url, "_blank");
-  }
-
-  function openAppWithFallback(appUrl, fallbackUrl) {
-    // Try opening the app directly
-    window.location = appUrl;
-
-    // Fallback to browser after 1.5 seconds
-    setTimeout(function () {
-      window.open(fallbackUrl, "_blank");
-    }, 1500);
-  }
-});
-
   // Instagram
   const instagram = document.getElementById("instagram");
-  instagram.addEventListener("click", function (e) {
-    e.preventDefault();
+  if (instagram) {
     const appUrl = "instagram://user?username=lexcy.__";
-    const webUrl = this.href;
-
-    if (isInAppBrowser()) {
-      openInExternalBrowser(webUrl);
-    } else {
-      openAppWithFallback(appUrl, webUrl);
-    }
-  });
+    const webUrl = "https://www.instagram.com/lexcy.__";
+    instagram.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (isInAppBrowser()) {
+        openInExternalBrowser(webUrl);
+      } else {
+        openAppWithFallback(appUrl, webUrl);
+      }
+    });
+  }
 
   // WhatsApp
   const whatsapp = document.getElementById("whatsapp");
-  whatsapp.addEventListener("click", function (e) {
-    e.preventDefault();
+  if (whatsapp) {
     const appUrl = "whatsapp://send?phone=+254734716845";
-    const webUrl = this.href;
-
-    if (isInAppBrowser()) {
-      openInExternalBrowser(webUrl);
-    } else {
-      openAppWithFallback(appUrl, webUrl);
-    }
-  });
+    const webUrl = "https://wa.me/254734716845";
+    whatsapp.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (isInAppBrowser()) {
+        openInExternalBrowser(webUrl);
+      } else {
+        openAppWithFallback(appUrl, webUrl);
+      }
+    });
+  }
 });
