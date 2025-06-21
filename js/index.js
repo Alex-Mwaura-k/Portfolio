@@ -82,18 +82,41 @@ function openInExternalBrowser(url) {
 
 document.addEventListener("DOMContentLoaded", function () {
   // LinkedIn
+document.addEventListener("DOMContentLoaded", function () {
   const linkedin = document.getElementById("linkedin");
-  linkedin.addEventListener("click", function (e) {
-    e.preventDefault();
-    const appUrl = "https://ke.linkedin.com/in/alex-mwaura-7707b21a2";
-    const webUrl = this.href;
+  const profileUrl = "https://www.linkedin.com/in/alex-mwaura-7707b21a2/";
 
-    if (isInAppBrowser()) {
-      openInExternalBrowser(webUrl);
-    } else {
-      openAppWithFallback(appUrl, webUrl);
-    }
-  });
+  if (linkedin) {
+    linkedin.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      if (isInAppBrowser()) {
+        openInExternalBrowser(profileUrl);
+      } else {
+        openAppWithFallback(profileUrl, profileUrl);
+      }
+    });
+  }
+
+  function isInAppBrowser() {
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
+    return /FBAN|FBAV|Instagram|Twitter|LinkedInApp/i.test(ua);
+  }
+
+  function openInExternalBrowser(url) {
+    window.open(url, "_blank");
+  }
+
+  function openAppWithFallback(appUrl, fallbackUrl) {
+    // Try opening the app directly
+    window.location = appUrl;
+
+    // Fallback to browser after 1.5 seconds
+    setTimeout(function () {
+      window.open(fallbackUrl, "_blank");
+    }, 1500);
+  }
+});
 
   // Instagram
   const instagram = document.getElementById("instagram");
