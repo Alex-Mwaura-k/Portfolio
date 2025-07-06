@@ -347,18 +347,8 @@ section {
   position: relative;
   background-repeat: no-repeat;
   background-position: center;
-  overflow: hidden; /* Prevent blur from overflowing */
-}
-
-.introduction::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+  overflow: hidden;
   background-image: url(/img/abstract.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: blur(2px);
-  z-index: -1;
 }
 
 .occupation {
