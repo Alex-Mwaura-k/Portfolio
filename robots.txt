@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Disallow sensitive directories (adjust as needed)
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /scripts/
+Disallow: /private/
+
+# Sitemap (if you have one)
+Sitemap: https://lexcy.co.ke/sitemap.xml

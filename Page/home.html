@@ -1,398 +1,735 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professional web developer and SOC analyst delivering top-notch website solutions and cybersecurity services.">
-  <meta name="keywords" content="web developer, SOC analyst, cybersecurity, web design, web development, online security, threat detection, incident response">
-  <meta name="author" content="Alex Mwaura kariuki">
-  <title>Lexcy</title>
-  <!-- Links -->
-  <link rel="icon" href="/img/favicon.ico">
-  <link rel="stylesheet" href="/styles/styles.css">
-  <link rel="stylesheet" href="/styles/glitch.css">
-  <link rel="stylesheet" href="/styles/Contact.css">
-  <link rel="stylesheet" href="/styles/logo-carousel.css" />
-  <!-- Font Awesome link icons  -->
-  <script src="https://kit.fontawesome.com/08b4a0d388.js" crossorigin="anonymous"></script>
-  <!-- Auto type js  -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <!-- Sweet Alert  -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-</head>
-<body>
-  <header>
-    <nav>
-      <div class="logo"><a href="/index.html"><h1>Lexcy</h1></a></div>
-      <ul class="navlinks">
-        <li><a href="#Home">Home</a></li>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Services">Services</a></li>
-        <li><a href="#Projects">Projects</a></li>
-        <li><a href="#Hire">Hire</a></li>
-        <div class="socials"><h4>#Get to know me 👍</h4>
-          <a href="https://open.spotify.com/user/31sxnwm26pmwuim7oqqhqj7mfejy?si=qI-ev0WaQCmL0UTh0xOOIg&utm_source=copy-link&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Fuser%2F31sxnwm26pmwuim7oqqhqj7mfejy%3Fsi%3DqI-ev0WaQCmL0UTh0xOOIg%26utm_source%3Dcopy-link&~channel=copy-link&feature=organic&_branch_match_id=1302037953892139407&_branch_referrer=H4sIAAAAAAAAA8WO6wqCMACFn2b9y2soBBLRBYJAgqKfsuZ0s93cJfXtm0H0CMGBA%2BcCH7FWmXUYGiUtbaYAKhUwKp7hRmlZO2QLqbBYgGTVOMYqp1lB5gtItyA5es118H0jyX3kDNbe0tiMYuBJpvjgKM9l35O%2By3mDuwmkR0NBuu9PS%2FyK7vCy4%2BfodiXRWJanFiSZs7wy0mmE%2FQpJNS1nqg8HZOwB0fPfLL4QtQ%2FiBcgPiEAhMCt%2BpA2G1mlcSN1CQdEbQUHPrWgBAAA%3D" target="_blank"><img src="/img/social media/spotify.png" alt="My Spotify Link" loading="lazy"></a>
-          <a href="https://www.instagram.com/lexcy.__" target="_blank"><img src="/img/social media/instagram.png" alt="My Instagram Link"></a>
-          <a href="https://web.facebook.com/Aleckky" target="_blank"><img src="/img/social media/facebook.png" alt="My Facebook Link"></a>
-          <a href="https://www.tiktok.com/@lexcy8k?is_from_webapp=1&sender_device=pc" target="_blank"><img src="/img/social media/tiktok.png" alt="My Tiktok Link"></a>
-        </div>  
-      </ul>
-      <div class="theme">
-        <div class="theme-toggle">
-          <input type="checkbox" id="themeToggle" class="theme-toggle-checkbox">
-          <label for="themeToggle" class="theme-toggle-label"></label>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional web developer and SOC analyst delivering top-notch website solutions and cybersecurity services."
+    />
+    <meta
+      name="keywords"
+      content="web developer, SOC analyst, cybersecurity, web design, web development, online security, threat detection, incident response"
+    />
+    <meta name="author" content="Alex Mwaura kariuki" />
+    <title>Lexcy</title>
+    <!-- Links -->
+    <link rel="icon" href="/img/favicon.ico" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="/styles/glitch.css" />
+    <link rel="stylesheet" href="/styles/Contact.css" />
+    <link rel="stylesheet" href="/styles/logo-carousel.css" />
+    <!-- Font Awesome link icons  -->
+    <script
+      src="https://kit.fontawesome.com/08b4a0d388.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Auto type js  -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <!-- Sweet Alert  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="/index.html"><h1>Lexcy</h1></a>
         </div>
-      </div>
-      <div class="burger_btn">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-    </nav>
-  </header>
-  <!-- Scroll back to top btn  -->
-  <div class="scroll-button" id="scrollButton">
-    <a href="#Home"><i class="fa-solid fa-arrow-up"></i></a>
-  </div>
-  <!-- Body Contents -->
-  <div class="particles-background" id="particles-js"></div>
-  <!-- Home section  -->
-  <section id="Home">
-    <div class="container" >
-      <div class="heropage">
-        <div class="introduction">
-          <div class="occupation">
-            <h3 id="demo"></h3>
-            <h3>I am a <span class="element"></span></h3>
-            <h3>I make the complex simple....</h3>
-            <a href="https://github.com/Alex-Mwaura-k" target="_blank" class="repo"><i class="fa-solid fa-code-merge"></i>Veiw Repository <i class="fa-brands fa-github"></i></a>
+        <ul class="navlinks">
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Services">Services</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Hire">Hire</a></li>
+          <div class="socials">
+            <h4>#Get to know me 👍</h4>
+            <a
+              href="https://open.spotify.com/user/31sxnwm26pmwuim7oqqhqj7mfejy?si=qI-ev0WaQCmL0UTh0xOOIg&utm_source=copy-link&nd=1&utm_medium=organic&product=open&%24full_url=https%3A%2F%2Fopen.spotify.com%2Fuser%2F31sxnwm26pmwuim7oqqhqj7mfejy%3Fsi%3DqI-ev0WaQCmL0UTh0xOOIg%26utm_source%3Dcopy-link&~channel=copy-link&feature=organic&_branch_match_id=1302037953892139407&_branch_referrer=H4sIAAAAAAAAA8WO6wqCMACFn2b9y2soBBLRBYJAgqKfsuZ0s93cJfXtm0H0CMGBA%2BcCH7FWmXUYGiUtbaYAKhUwKp7hRmlZO2QLqbBYgGTVOMYqp1lB5gtItyA5es118H0jyX3kDNbe0tiMYuBJpvjgKM9l35O%2By3mDuwmkR0NBuu9PS%2FyK7vCy4%2BfodiXRWJanFiSZs7wy0mmE%2FQpJNS1nqg8HZOwB0fPfLL4QtQ%2FiBcgPiEAhMCt%2BpA2G1mlcSN1CQdEbQUHPrWgBAAA%3D"
+              target="_blank"
+            >
+              <img
+                src="/img/social media/spotify.png"
+                alt="My Spotify Link"
+                loading="lazy"
+              />
+            </a>
+            <a href="https://www.instagram.com/lexcy.__" target="_blank">
+              <img
+                src="/img/social media/instagram.png"
+                alt="My Instagram Link"
+                loading="lazy"
+              />
+            </a>
+            <a href="https://web.facebook.com/Aleckky" target="_blank">
+              <img
+                src="/img/social media/facebook.png"
+                alt="My Facebook Link"
+                loading="lazy"
+              />
+            </a>
+            <a
+              href="https://www.tiktok.com/@lexcy8k?is_from_webapp=1&sender_device=pc"
+              target="_blank"
+            >
+              <img
+                src="/img/social media/tiktok.png"
+                alt="My TikTok Link"
+                loading="lazy"
+              />
+            </a>
           </div>
-          <div class="contact">
-            <div class="email">
-              <h3>Email</h3>
-              <p><i class="fa-solid fa-envelope"></i> <a href="mailto:alecsmwaura@gmail.com?subject=Hello&body=Intrested in your work" target="_blank">alecsmwaura@gmail.com</a></p>
-            </div>
-            <div class="phone">
-              <h3>Phone</h3>
-              <p><i class="fa-solid fa-phone-flip"></i> <a href="tel:+254734716845" target="_blank">+254734716845</a></p>
-            </div>
-            <div class="location">
-              <h3>Location</h3>
-              <p><i class="fa-solid fa-location-dot"></i> <a href="https://www.google.com/maps/place/Nairobi/@-1.2920659,36.8219462,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipPBhj_TjWXfvjvrZ400bNLbzSEXtlf52WGiQOBt!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPBhj_TjWXfvjvrZ400bNLbzSEXtlf52WGiQOBt%3Dw203-h250-k-no!7i720!8i887!4m9!3m8!1s0x182f1172d84d49a7:0xf7cf0254b297924c!8m2!3d-1.2920659!4d36.8219462!10e5!14m1!1BCgIgAQ!16zL20vMDVkNDk?entry=ttu" target="_blank">Nairobi, Kenya</a></p>
-            </div>
+        </ul>
+        <div class="theme">
+          <div class="theme-toggle">
+            <input
+              type="checkbox"
+              id="themeToggle"
+              class="theme-toggle-checkbox"
+            />
+            <label for="themeToggle" class="theme-toggle-label"></label>
           </div>
         </div>
-        <div class="image">
-          <h2 class="hero glitch layers one" data-text="****"><span style="color: #35848f;"> 
-          WELCOME<br>
-          .... <br>
-          [ Lets Develop ] <br>
-          ---- <br>
-          " Wake up <br>
-          .... <br>
-          Code > <br>
-          ---- <br>
-          Repeat" 
-          </span></h2><br>
-          <h2 class="hero glitch layers" data-text="Code"><span>| Alex Mwaura |</span></h2>
+        <div class="burger_btn">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
-      </div>
+      </nav>
+    </header>
+    <!-- Scroll back to top btn  -->
+    <div class="scroll-button" id="scrollButton">
+      <a href="#Home"><i class="fa-solid fa-arrow-up"></i></a>
     </div>
-  </section>
-  <!-- About section  -->
-  <section id="About">
-    <div class="container">
-      <div class="about-img">
-        <div class="myimage">
-          <div class="img-animation">
-            <div class="img-content"><img src="/img/me.png" alt="My image"></div>
-          </div>
-        </div>
-        <div class="skills">
-          <div class="skillbox animate2"><h3>Skills</h3>
-            <div class="skills-container">
-              <div class="skill-language"></div>
-              <div class="skill-language"></div>
-              <div class="skill-language"><img src="/img/skills/science.png" alt="React-skill"></div>
-              <div class="skill-language"></div>
-              <div class="skill-language"></div>
-              <div class="skill-language"></div>
-              <div class="skill-language"><img src="/img/skills/css-3.png" alt="Css-skill"></div>
-              <div class="skill-language"><img src="/img/skills/python.png" alt="Python-skill"></div>
-              <div class="skill-language"><img src="/img/skills/php.png" alt="php-skill"></div>
-              <div class="skill-language"></div>
-              <div class="skill-language"><img src="/img/skills/html-5.png" alt="Html-skill"></div>
-              <div class="skill-language"><img src="/img/skills/js.png" alt="Js-skill"></div>
-              <div class="skill-language"><img src="/img/skills/nodejs.png" alt="Node-skill"></div>
-              <div class="skill-language"><img src="/img/skills/my-sql.png" alt="mysql-skill"></div>
-              <div class="skill-language"><img src="/img/skills/sql-server.png" alt="Sql-skill"></div>
+    <!-- Body Contents -->
+    <div class="particles-background" id="particles-js"></div>
+    <!-- Home section  -->
+    <section id="Home">
+      <div class="container">
+        <div class="heropage">
+          <div class="introduction">
+            <div class="occupation">
+              <h3 id="demo"></h3>
+              <h3>I am a <span class="element"></span></h3>
+              <h3>I make the complex simple....</h3>
+              <a
+                href="https://github.com/Alex-Mwaura-k"
+                target="_blank"
+                class="repo"
+                ><i class="fa-solid fa-code-merge"></i>Veiw Repository
+                <i class="fa-brands fa-github"></i
+              ></a>
             </div>
-          </div>    
-        </div>
-      </div>
-      <div class="about-detail">
-        <h3 class="animate2">Who am I ?</h3>
-        <h3 class="animate">A Developer, Security Analyst, Tech Support Personnel and a Teacher.</h3>
-        <p class="animate2"> 
-          Being a tech enthusiast residing in Kenya, my passion for technology fuels my drive to craft digital solutions that enhance people's daily lives. With over 3 years of dedicated experience in web development, I have sharpened my expertise across multiple domains including front-end, back-end, responsive design, cloud, cybersecurity, and general IT support. My proficiency spans a diverse array of programming languages and tools such as HTML, CSS, JavaScript,Python, React, and Django. Beyond IT, I also excel as a teacher, demonstrating my versatility and commitment to both Education and Technology.
-        </p>
-        <div class="other-skills">
-          <p>
-            Other skills :
-          </p>
-        </div>
-        <div class="other-skills">
-          <p class="animate2">
-            <i class="fa-solid fa-arrow-up-right-dots animate"></i> SM Management
-          </p>
-          <p>
-            <i class="fa-solid fa-shield-halved animate"></i>  Cyber Security
-          </p>
-        </div>
-        <div class="other-skills">
-          <p>
-            <i class="fa-solid fa-chalkboard-user animate"></i> Technical Support
-          </p>
-          <p>
-            <i class="fa-brands fa-nfc-directional animate"></i> Data Security
-          </p>
-        </div>
-        <div class="download animate2">
-            <div class="downloadresume">
-              <a href="https://drive.google.com/file/d/1XWsT0dm4BD1PViL_RPBGSepNVSHnAmh_/view?usp=sharing" target="_blank">
-              <i class="fa-solid fa-folder-tree"></i> Download Cv <i class="fas fa-download"></i>
-              </a>
-            </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- services section  -->
-  <section id="Services">
-    <div class="container">
-      <div class="service-title"><h2 class="animate">My Services 🛠️</h2></div>
-      <div class="service-info">
-        <div class="boxes">
-          <div class="box animate2">
-            <div class="icon">
-              <i class="fas fa-desktop"></i>
-            </div>
-            <div class="topic">Web Devlopment</div>
-            <p>
-              Crafting immersive digital experiences that captivate users with cutting-edge technology and meticulous design. Let's elevate your online presence together</p>
-          </div>
-          <div class="box animate2">
-            <div class="icon">
-              <i class="fas fa-cloud"></i>
-            </div>
-            <div class="topic">AWS Cloud Architecting</div>
-            <p>
-              Designing scalable, secure, and cost-effective cloud solutions on AWS. I build infrastructures that power innovation, ensuring reliability and performance.
-            </p>
-          </div>
-
-          <div class="box animate2">
-            <div class="icon">
-              <i class="fa-solid fa-arrow-up-right-dots"></i>
-            </div>
-            <div class="topic">SM Management</div>
-            <p>
-              Maximizing your online presence, I strategically curate content, engage your audience, and elevate your brand on social media platforms.</p>
-          </div>
-          <div class="box animate2">
-            <div class="icon">
-              <i class="fa-solid fa-shield-halved"></i>
-            </div>
-            <div class="topic">Cyber  Security</div>
-           <p>Securing digital assets with robust measures, safeguarding the integrity, confidentiality, and availability of your organization’s data.</p>
-          </div>
-         <div class="box animate2">
-            <div class="icon">
-              <i class="fas fa-chalkboard-teacher"></i>
-            </div>
-            <div class="topic">Tutor</div>
-            <p>
-              Empowering students through personalized learning, I simplify complex concepts and inspire curiosity, fostering a deeper understanding.
-            </p>
-         </div>
-
-          <div class="box animate2">
-            <div class="icon">
-              <i class="fa-solid fa-chalkboard-user"></i>
-            </div>
-            <div class="topic">Technical Support</div>
-            <p>Providing expert assistance, troubleshooting, and guidance, ensuring seamless operation and optimal performance for your technical needs.</p>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  </section>
-  <!-- projects section  -->
-  <section id="Projects">
-    <div class="container">
-      <div class="project-title"><h2 class="animate">Featured Projects 👷🏻</h2></div>
-      <div class="project-info">
-        <div class="wrap animated pop">
-          <div class="overlay">
-            <div class="overlay-content animated slide-left delay-2">
-              <h3 class="animated slide-left pop delay-4">Fedha Lands</h3>
-              <p class="animated slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;"><em>- Real Estate</em></p>
-            </div>
-            <div class="image-content animated slide delay-5 fedha"></div>
-                <div class="dots animated">
-                  <div class="dot animated slide-up delay-6"></div>
-                  <div class="dot animated slide-up delay-7"></div>
-                  <div class="dot animated slide-up delay-8"></div>
-                </div>
-          </div>
-            <div class="text">
-              <p>
-                Fedha Land Ventures specializes in real estate services, offering transparent pricing and valuable investment opportunities to clients in Ruiru and beyond. Visit their page for more informmation. 
+            <div class="contact">
+              <div class="email">
+                <h3>Email</h3>
+                <p>
+                  <i class="fa-solid fa-envelope"></i>
+                  <a
+                    href="mailto:alecsmwaura@gmail.com?subject=Hello&body=Intrested in your work"
+                    target="_blank"
+                    >alecsmwaura@gmail.com</a
+                  >
                 </p>
-                <div class="project-btn">
-                  <a href="https://fedhalandventures.co.ke/" target="_blank">Visit</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="wrap animated pop">
-          <div class="overlay">
-            <div class="overlay-content animated slide-left delay-2">
-              <h3 class="animated slide-left pop delay-4">La-foodie</h3>
-              <p class="animated slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;"><em>- Quick Foods</em></p>
-            </div>
-            <div class="image-content animated slide delay-5 lafoodie"></div>
-                <div class="dots animated">
-                  <div class="dot animated slide-up delay-6"></div>
-                  <div class="dot animated slide-up delay-7"></div>
-                  <div class="dot animated slide-up delay-8"></div>
-                </div>
-          </div>
-            <div class="text">
-              <p>
-                They offer doorstep delivery of a variety of culinary delights, including meals, snacks, and treats, tailored to your preferences and cravings. Get to experience their services today.
-              </p>
-              <div class="project-btn">
-                <a href="https://lafoodie.netlify.app/" target="_blank">Visit</a>
+              </div>
+              <div class="phone">
+                <h3>Phone</h3>
+                <p>
+                  <i class="fa-solid fa-phone-flip"></i>
+                  <a href="tel:+254734716845" target="_blank">+254734716845</a>
+                </p>
+              </div>
+              <div class="location">
+                <h3>Location</h3>
+                <p>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <a
+                    href="https://www.google.com/maps/place/Nairobi/@-1.2920659,36.8219462,3a,75y,90t/data=!3m8!1e2!3m6!1sAF1QipPBhj_TjWXfvjvrZ400bNLbzSEXtlf52WGiQOBt!2e10!3e12!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipPBhj_TjWXfvjvrZ400bNLbzSEXtlf52WGiQOBt%3Dw203-h250-k-no!7i720!8i887!4m9!3m8!1s0x182f1172d84d49a7:0xf7cf0254b297924c!8m2!3d-1.2920659!4d36.8219462!10e5!14m1!1BCgIgAQ!16zL20vMDVkNDk?entry=ttu"
+                    target="_blank"
+                    >Nairobi, Kenya</a
+                  >
+                </p>
               </div>
             </div>
-        </div>
-      </div>
-      <div class="credits">
-        <p>[ credits ]</p>
-        <div class="logos">
-          <div class="logos-slide">
-            <img src="/img/logos/freecodecamp.svg" />
-            <img src="/img/logos/mimo-seeklogo.svg" />
-            <img src="/img/logos/comptia-logo.svg" />
-            <img src="/img/logos/google.svg" />
-            <img src="/img/logos/amazon.svg" />
-            <img src="/img/logos/north.svg" />
-            <img src="/img/logos/www.svg" />
-            <img src="/img/logos/logo.png" />
           </div>
-          <!-- Duplicate content for smooth scrolling -->
-          <div class="logos-slide">
-            <img src="/img/logos/freecodecamp.svg" />
-            <img src="/img/logos/mimo-seeklogo.svg" />
-            <img src="/img/logos/comptia-logo.svg" />
-            <img src="/img/logos/google.svg" />
-            <img src="/img/logos/amazon.svg" />
-            <img src="/img/logos/north.svg" />
-            <img src="/img/logos/www.svg" />
-            <img src="/img/logos/logo.png" />
+          <div class="image">
+            <h2 class="hero glitch layers one" data-text="****">
+              <span style="color: #35848f">
+                WELCOME<br />
+                .... <br />
+                [ Lets Develop ] <br />
+                ---- <br />
+                " Wake up <br />
+                .... <br />
+                Code > <br />
+                ---- <br />
+                Repeat"
+              </span>
+            </h2>
+            <br />
+            <h2 class="hero glitch layers" data-text="Code">
+              <span>| Alex Mwaura |</span>
+            </h2>
           </div>
         </div>
-      </div>      
+      </div>
+    </section>
+    <!-- About section  -->
+    <section id="About">
+      <div class="container">
+        <div class="about-img">
+          <div class="myimage">
+            <div class="img-animation">
+              <div class="img-content">
+                <img src="/img/me.png" alt="My Image" loading="lazy" />
+              </div>
+            </div>
+          </div>
+          <div class="skills">
+            <div class="skillbox animate2">
+              <h3>Skills</h3>
+              <div class="skills-container">
+                <div class="skill-language"></div>
+                <div class="skill-language"></div>
+                <div class="skill-language">
+                  <img
+                    src="/img/skills/science.png"
+                    alt="React Skill"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="skill-language"></div>
+                <div class="skill-language"></div>
+                <div class="skill-language"></div>
+                <div class="skill-language">
+                  <img
+                    src="/img/skills/css-3.png"
+                    alt="CSS Skill"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="skill-language">
+                  <img
+                    src="/img/skills/python.png"
+                    alt="Python Skill"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="skill-language">
+                  <img
+                    src="/img/skills/php.png"
+                    alt="PHP Skill"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="skill-language"></div>
+                <div class="skill-language">
+                  <img
+                    src="/img/skills/html-5.png"
+                    alt="HTML Skill"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="skill-language">
+                  <img
+                    src="/img/skills/js.png"
+                    alt="JavaScript Skill"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="skill-language">
+                  <img
+                    src="/img/skills/nodejs.png"
+                    alt="Node.js Skill"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="skill-language">
+                  <img
+                    src="/img/skills/my-sql.png"
+                    alt="MySQL Skill"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="skill-language">
+                  <img
+                    src="/img/skills/sql-server.png"
+                    alt="SQL Server Skill"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-detail">
+          <h3 class="animate2">Who am I ?</h3>
+          <h3 class="animate">
+            A Developer, Security Analyst, Tech Support Personnel and a Teacher.
+          </h3>
+          <p class="animate2">
+            Being a tech enthusiast residing in Kenya, my passion for technology
+            fuels my drive to craft digital solutions that enhance people's
+            daily lives. With over 3 years of dedicated experience in web
+            development, I have sharpened my expertise across multiple domains
+            including front-end, back-end, responsive design, cloud,
+            cybersecurity, and general IT support. My proficiency spans a
+            diverse array of programming languages and tools such as HTML, CSS,
+            JavaScript,Python, React, and Django. Beyond IT, I also excel as a
+            teacher, demonstrating my versatility and commitment to both
+            Education and Technology.
+          </p>
+          <div class="other-skills">
+            <p>Other skills :</p>
+          </div>
+          <div class="other-skills">
+            <p class="animate2">
+              <i class="fa-solid fa-arrow-up-right-dots animate"></i> SM
+              Management
+            </p>
+            <p>
+              <i class="fa-solid fa-shield-halved animate"></i> Cyber Security
+            </p>
+          </div>
+          <div class="other-skills">
+            <p>
+              <i class="fa-solid fa-chalkboard-user animate"></i> Technical
+              Support
+            </p>
+            <p>
+              <i class="fa-brands fa-nfc-directional animate"></i> Data Security
+            </p>
+          </div>
+          <div class="download animate2">
+            <div class="downloadresume">
+              <a
+                href="https://drive.google.com/file/d/1XWsT0dm4BD1PViL_RPBGSepNVSHnAmh_/view?usp=sharing"
+                target="_blank"
+              >
+                <i class="fa-solid fa-folder-tree"></i> Download Cv
+                <i class="fas fa-download"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-  </section>
-  <!-- Hire section  -->
-  <section id="Hire">
-    <div class="contact-container-bg">
-      <div class="container-contact">
-        <div class="contactInfo animate2">
-          <div>
-            <h2>Contact Info</h2>
-            <ul class="info">
+    </section>
+    <!-- services section  -->
+    <section id="Services">
+      <div class="container">
+        <div class="service-title"><h2 class="animate">My Services 🛠️</h2></div>
+        <div class="service-info">
+          <div class="boxes">
+            <div class="box animate2">
+              <div class="icon">
+                <i class="fas fa-desktop"></i>
+              </div>
+              <div class="topic">Web Devlopment</div>
+              <p>
+                Crafting immersive digital experiences that captivate users with
+                cutting-edge technology and meticulous design. Let's elevate
+                your online presence together
+              </p>
+            </div>
+            <div class="box animate2">
+              <div class="icon">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <div class="topic">AWS Cloud Architecting</div>
+              <p>
+                Designing scalable, secure, and cost-effective cloud solutions
+                on AWS. I build infrastructures that power innovation, ensuring
+                reliability and performance.
+              </p>
+            </div>
+
+            <div class="box animate2">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-right-dots"></i>
+              </div>
+              <div class="topic">SM Management</div>
+              <p>
+                Maximizing your online presence, I strategically curate content,
+                engage your audience, and elevate your brand on social media
+                platforms.
+              </p>
+            </div>
+            <div class="box animate2">
+              <div class="icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div class="topic">Cyber Security</div>
+              <p>
+                Securing digital assets with robust measures, safeguarding the
+                integrity, confidentiality, and availability of your
+                organization’s data.
+              </p>
+            </div>
+            <div class="box animate2">
+              <div class="icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="topic">Tutor</div>
+              <p>
+                Empowering students through personalized learning, I simplify
+                complex concepts and inspire curiosity, fostering a deeper
+                understanding.
+              </p>
+            </div>
+
+            <div class="box animate2">
+              <div class="icon">
+                <i class="fa-solid fa-chalkboard-user"></i>
+              </div>
+              <div class="topic">Technical Support</div>
+              <p>
+                Providing expert assistance, troubleshooting, and guidance,
+                ensuring seamless operation and optimal performance for your
+                technical needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- projects section  -->
+    <section id="Projects">
+      <div class="container">
+        <div class="project-title">
+          <h2 class="animate">Featured Projects 👷🏻</h2>
+        </div>
+        <div class="project-info">
+          <div class="wrap animated pop">
+            <div class="overlay">
+              <div class="overlay-content animated slide-left delay-2">
+                <h3 class="animated slide-left pop delay-4">Fedha Lands</h3>
+                <p
+                  class="animated slide-left pop delay-5"
+                  style="color: white; margin-bottom: 2.5rem"
+                >
+                  <em>- Real Estate</em>
+                </p>
+              </div>
+              <div class="image-content animated slide delay-5 fedha"></div>
+              <div class="dots animated">
+                <div class="dot animated slide-up delay-6"></div>
+                <div class="dot animated slide-up delay-7"></div>
+                <div class="dot animated slide-up delay-8"></div>
+              </div>
+            </div>
+            <div class="text">
+              <p>
+                Fedha Land Ventures specializes in real estate services,
+                offering transparent pricing and valuable investment
+                opportunities to clients in Ruiru and beyond. Visit their page
+                for more informmation.
+              </p>
+              <div class="project-btn">
+                <a href="https://fedhalandventures.co.ke/" target="_blank"
+                  >Visit</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="wrap animated pop">
+            <div class="overlay">
+              <div class="overlay-content animated slide-left delay-2">
+                <h3 class="animated slide-left pop delay-4">La-foodie</h3>
+                <p
+                  class="animated slide-left pop delay-5"
+                  style="color: white; margin-bottom: 2.5rem"
+                >
+                  <em>- Quick Foods</em>
+                </p>
+              </div>
+              <div class="image-content animated slide delay-5 lafoodie"></div>
+              <div class="dots animated">
+                <div class="dot animated slide-up delay-6"></div>
+                <div class="dot animated slide-up delay-7"></div>
+                <div class="dot animated slide-up delay-8"></div>
+              </div>
+            </div>
+            <div class="text">
+              <p>
+                They offer doorstep delivery of a variety of culinary delights,
+                including meals, snacks, and treats, tailored to your
+                preferences and cravings. Get to experience their services
+                today.
+              </p>
+              <div class="project-btn">
+                <a href="https://lafoodie.netlify.app/" target="_blank"
+                  >Visit</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="credits">
+          <p>[ credits ]</p>
+          <div class="logos">
+            <div class="logos-slide">
+              <img
+                src="/img/logos/freecodecamp.svg"
+                alt="freeCodeCamp Logo"
+                loading="lazy"
+              />
+              <img
+                src="/img/logos/mimo-seeklogo.svg"
+                alt="Mimo Logo"
+                loading="lazy"
+              />
+              <img
+                src="/img/logos/comptia-logo.svg"
+                alt="CompTIA Logo"
+                loading="lazy"
+              />
+              <img
+                src="/img/logos/google.svg"
+                alt="Google Logo"
+                loading="lazy"
+              />
+              <img
+                src="/img/logos/amazon.svg"
+                alt="Amazon Logo"
+                loading="lazy"
+              />
+              <img src="/img/logos/north.svg" alt="North Logo" loading="lazy" />
+              <img src="/img/logos/www.svg" alt="WWW Logo" loading="lazy" />
+              <img
+                src="/img/logos/logo.png"
+                alt="Company Logo"
+                loading="lazy"
+              />
+            </div>
+            <!-- Duplicate content for smooth scrolling -->
+            <div class="logos-slide">
+              <img
+                src="/img/logos/freecodecamp.svg"
+                alt="freeCodeCamp Logo"
+                loading="lazy"
+              />
+              <img
+                src="/img/logos/mimo-seeklogo.svg"
+                alt="Mimo Logo"
+                loading="lazy"
+              />
+              <img
+                src="/img/logos/comptia-logo.svg"
+                alt="CompTIA Logo"
+                loading="lazy"
+              />
+              <img
+                src="/img/logos/google.svg"
+                alt="Google Logo"
+                loading="lazy"
+              />
+              <img
+                src="/img/logos/amazon.svg"
+                alt="Amazon Logo"
+                loading="lazy"
+              />
+              <img src="/img/logos/north.svg" alt="North Logo" loading="lazy" />
+              <img src="/img/logos/www.svg" alt="WWW Logo" loading="lazy" />
+              <img
+                src="/img/logos/logo.png"
+                alt="Company Logo"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hire section  -->
+    <section id="Hire">
+      <div class="contact-container-bg">
+        <div class="container-contact">
+          <div class="contactInfo animate2">
+            <div>
+              <h2>Contact Info</h2>
+              <ul class="info">
+                <li>
+                  <span
+                    ><img
+                      src="/img/location.png"
+                      alt="Nairobi Location"
+                      loading="lazy"
+                  /></span>
+                  <span
+                    ><a
+                      href="https://www.google.com/maps/place/Nairobi/@-1.3031874,36.5177334,10z/data=!3m1!4b1!4m6!3m5!1s0x182f1172d84d49a7:0xf7cf0254b297924c!8m2!3d-1.2920659!4d36.8219462!16zL20vMDVkNDk?entry=ttu"
+                      target="_blank"
+                    >
+                      Nairobi, kenya</a
+                    ><br />
+                  </span>
+                </li>
+                <li>
+                  <span
+                    ><img src="/img/mail.png" alt="Mail Icon" loading="lazy"
+                  /></span>
+                  <span
+                    ><a href="mailto:alecsmwaura@gmail.com"
+                      >alecsmwaura@gmail.com</a
+                    ></span
+                  >
+                </li>
+                <li>
+                  <span
+                    ><img src="/img/call.png" alt="Call Icon" loading="lazy"
+                  /></span>
+                  <span><a href="tel:+254729497152">+254-729-497-152</a></span>
+                </li>
+              </ul>
+            </div>
+            <ul class="socialIcon">
               <li>
-                <span><img src="/img/location.png" alt="Nairobi Location"></span>
-                <span><a href="https://www.google.com/maps/place/Nairobi/@-1.3031874,36.5177334,10z/data=!3m1!4b1!4m6!3m5!1s0x182f1172d84d49a7:0xf7cf0254b297924c!8m2!3d-1.2920659!4d36.8219462!16zL20vMDVkNDk?entry=ttu" target="_blank">
-                  Nairobi, kenya</a><br>
-                </span>
+                <a href="https://www.facebook.com/Aleckky/" target="_blank">
+                  <img
+                    src="/img/1.png"
+                    alt="Alex Mwaura - Facebook"
+                    loading="lazy"
+                  />
+                </a>
               </li>
               <li>
-                <span><img src="/img/mail.png" alt=""></span>
-                <span><a href="mailto:alecsmwaura@gmail.com">alecsmwaura@gmail.com</a></span>
+                <a href="https://x.com/Twistedlexx" target="_blank">
+                  <img
+                    src="/img/2.png"
+                    alt="Alex Mwaura - Twitter"
+                    loading="lazy"
+                  />
+                </a>
               </li>
               <li>
-                <span><img src="/img/call.png" alt=""></span>
-                <span><a href="tel:+254729497152">+254-729-497-152</a></span>
+                <a href="https://www.instagram.com/lexcy.__/" target="_blank">
+                  <img
+                    src="/img/3.png"
+                    alt="Alex Mwaura - Instagram"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="https://pin.it/1n6pgULBF" target="_blank">
+                  <img
+                    src="/img/4.png"
+                    alt="Alex Mwaura - Pinterest"
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com/in/alex-mwaura-7707b21a2"
+                  target="_blank"
+                >
+                  <img
+                    src="/img/5.png"
+                    alt="Alex Mwaura - LinkedIn"
+                    loading="lazy"
+                  />
+                </a>
               </li>
             </ul>
           </div>
-          <ul class="socialIcon">
-            <li><a href="https://www.facebook.com/Aleckky/" target="_blank"><img src="/img/1.png" alt="Alex Mwaura-Facebook"></a></li>
-            <li><a href="https://x.com/Twistedlexx" target="_blank"><img src="/img/2.png" alt="Alex Mwaura-Twitter"></a></li>
-            <li><a href="https://www.instagram.com/lexcy.__/" target="_blank"><img src="/img/3.png" alt="Alex Mwaura-Instagram"></a></li>
-            <li><a href="https://pin.it/1n6pgULBF" target="_blank"><img src="/img/4.png" alt="Alex Mwaura-Pintrest"></a></li>
-            <li><a href="https://linkedin.com/in/alex-mwaura-7707b21a2" target="_blank"><img src="/img/5.png" alt="Alex Mwaura-Linkedin"></a></li>
-          </ul>
-        </div>
 
-        <div class="contactForm">
-          <h2 class="animate">Let me work on your Project😊</h2>
-          <form id="contactForm" action="https://formsubmit.co/bc0a494dae97d953a6562555ec7d81a5" method="POST">
-            <div class="formBox animate2">
-              <div class="inputBox w50">
-                <input type="text" name="FirstName" id="FirstName" placeholder="First Name" required>
+          <div class="contactForm">
+            <h2 class="animate">Let me work on your Project😊</h2>
+            <form
+              id="contactForm"
+              action="https://formsubmit.co/bc0a494dae97d953a6562555ec7d81a5"
+              method="POST"
+            >
+              <div class="formBox animate2">
+                <div class="inputBox w50">
+                  <input
+                    type="text"
+                    name="FirstName"
+                    id="FirstName"
+                    placeholder="First Name"
+                    required
+                  />
+                </div>
+                <div class="inputBox w50">
+                  <input
+                    type="text"
+                    name="LastName"
+                    id="LastName"
+                    placeholder="Last Name"
+                    required
+                  />
+                </div>
+                <div class="inputBox w50">
+                  <input
+                    type="email"
+                    name="Email"
+                    id="Email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="inputBox w50">
+                  <input
+                    type="tel"
+                    name="Phone"
+                    id="Phone"
+                    placeholder="Mobile Number"
+                    required
+                  />
+                </div>
+                <div class="inputBox w100">
+                  <textarea
+                    name="Message"
+                    id="Message"
+                    rows="4"
+                    placeholder="Write Your Message Here."
+                    required
+                  ></textarea>
+                </div>
+                <div class="inputBox w100 animate">
+                  <input type="submit" value="Send" id="submitForm" />
+                </div>
+                <!-- Form submit buttons -->
+                <input type="hidden" name="_captcha" value="false" />
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://lexcy.co.ke/page/home#Hire"
+                />
+                <input type="hidden" name="_template" value="table" />
               </div>
-              <div class="inputBox w50">
-                <input type="text" name="LastName" id="LastName" placeholder="Last Name" required>
-              </div>
-              <div class="inputBox w50">
-                <input type="email" name="Email" id="Email" placeholder="Email" required>
-              </div>
-              <div class="inputBox w50">
-                <input type="tel" name="Phone" id="Phone" placeholder="Mobile Number" required>
-              </div>
-              <div class="inputBox w100">
-                <textarea name="Message" id="Message" rows="4" placeholder="Write Your Message Here." required></textarea>
-              </div>
-              <div class="inputBox w100 animate">
-                <input type="submit" value="Send" id="submitForm" >
-              </div>
-              <!-- Form submit buttons -->
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_next" value="https://lexcy.co.ke/page/home#Hire">
-              <input type="hidden" name="_template" value="table">
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
+    </section>
+    <!-- Footer section  -->
+    <div class="page-wrapper">
+      <div id="waterdrop"></div>
+      <footer>
+        <div class="footer-details">
+          <p>Copyright © <span id="copyright-year"></span></p>
+          <p>Crafted with❤️</p>
+        </div>
+      </footer>
     </div>
-  </section>
-  <!-- Footer section  -->
-  <div class="page-wrapper">
-    <div id="waterdrop"></div>
-    <footer>
-      <div class="footer-details">
-        <p>Copyright © <span id="copyright-year"></span></p>
-        <p>Crafted with❤️</p>
-      </div>
-    </footer>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
-  <script> jQuery('#waterdrop').raindrops({color:'#042A32', canvasHeight:145, density: 0.06, frequency: 25});
-  </script>
-  <!-- Footer section  -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="/js/app.js"></script>
-  <script src="/js/contact.js"></script>
-  <script src="/js/animation.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+    <script>
+      jQuery("#waterdrop").raindrops({
+        color: "#042A32",
+        canvasHeight: 145,
+        density: 0.06,
+        frequency: 25,
+      });
+    </script>
+    <!-- Footer section  -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/contact.js"></script>
+    <script src="/js/animation.js"></script>
+  </body>
 </html>
