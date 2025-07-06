@@ -344,10 +344,23 @@ section {
   padding: 10px 5px;
 }
 .introduction {
+  position: relative;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(/img/abstract.png);
+  overflow: hidden; /* Prevent blur from overflowing */
 }
+
+.introduction::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(/img/abstract.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(2px);
+  z-index: -1;
+}
+
 .occupation {
   display: flex;
   flex-direction: column;
